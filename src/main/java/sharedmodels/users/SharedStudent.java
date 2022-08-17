@@ -7,7 +7,8 @@ import sharedmodels.department.TemporaryCourse;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Random;public class SharedStudent extends SharedUser {
+import java.util.Random;
+public class SharedStudent extends SharedUser {
     private double average;
     private int units;
     private Department department;
