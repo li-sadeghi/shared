@@ -6,27 +6,27 @@ import sharedmodels.users.SharedUser;
 import java.util.ArrayList;
 
 public class Chat {
-    private SharedUser sender;
-    private SharedUser receiver;
+    private String senderId;
+    private String receiverId;
     private ArrayList<Message> messages = new ArrayList<>();
 
     public Chat() {
     }
 
-    public SharedUser getSender() {
-        return sender;
+    public String getSenderId() {
+        return senderId;
     }
 
-    public void setSender(SharedUser sender) {
-        this.sender = sender;
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
     }
 
-    public SharedUser getReceiver() {
-        return receiver;
+    public String getReceiverId() {
+        return receiverId;
     }
 
-    public void setReceiver(SharedUser receiver) {
-        this.receiver = receiver;
+    public void setReceiverId(String receiverId) {
+        this.receiverId = receiverId;
     }
 
     public ArrayList<Message> getMessages() {

@@ -13,5 +13,7 @@ public enum RequestType {
     GET_TIME,
     CHANGE_PHONE,
     CHANGE_EMAIL,
-    CHANGE_PASS
+    CHANGE_PASS,
+    DELETE_COURSE,
+    DELETE_MASTER
 }

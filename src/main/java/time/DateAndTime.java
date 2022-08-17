@@ -1,7 +1,11 @@
 package time;
 
+import sharedmodels.department.Course;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class DateAndTime {
     public static String getDateAndTime() {
@@ -23,5 +27,25 @@ public class DateAndTime {
         } else {
             return false;
         }
+    }
+
+    public static ArrayList<Course> getSortedCourses(ArrayList<Course> courses) {
+        ArrayList<LocalDateTime> examTimes = new ArrayList<>();
+        for (int i = 0; i < courses.size(); i++) {
+            String timeString = courses.get(i).getExamTime();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'At' HH:mm:ss");
+            LocalDateTime localDateTime = LocalDateTime.parse(timeString, formatter);
+            examTimes.add(localDateTime);
+        }
+        for (int i = 0; i < examTimes.size() - 1; i++) {
+            for (int j = 0; j < examTimes.size() - i - 1; j++) {
+                if (examTimes.get(j).isAfter(examTimes.get(j + 1))) {
+                    Collections.swap(courses, j, j + 1);
+                    Collections.swap(examTimes, j, j+1);
+                }
+            }
+        }
+
+        return courses;
     }
 }
