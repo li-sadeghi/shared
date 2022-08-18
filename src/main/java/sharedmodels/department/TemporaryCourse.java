@@ -8,6 +8,7 @@ public class TemporaryCourse {
     private double mark;
     private int unit;
     private String name;
+    private String courseId;
     private PassStatus status;
     private String protestText;
     private SharedMaster master;
@@ -86,5 +87,13 @@ public class TemporaryCourse {
 
     public void setStudent(SharedStudent student) {
         this.student = student;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 }

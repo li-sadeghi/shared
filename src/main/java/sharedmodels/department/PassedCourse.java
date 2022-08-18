@@ -8,6 +8,7 @@ public class PassedCourse {
     private double mark;
     private int unit;
     private String name;
+    private String courseId;
     private PassStatus status;
     private SharedStudent master;
     private SharedStudent student;
@@ -77,5 +78,13 @@ public class PassedCourse {
 
     public void setStudent(SharedStudent student) {
         this.student = student;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 }

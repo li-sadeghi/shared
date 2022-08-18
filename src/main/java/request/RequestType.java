@@ -15,5 +15,11 @@ public enum RequestType {
     CHANGE_EMAIL,
     CHANGE_PASS,
     DELETE_COURSE,
-    DELETE_MASTER
+    DELETE_MASTER,
+    ADD_COURSE,
+    EDIT_COURSE,
+    ADD_STUDENT,
+    ADD_MASTER,
+    EDIT_MASTER,
+    NEW_PROTEST
 }
