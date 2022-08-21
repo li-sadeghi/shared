@@ -3,12 +3,15 @@ package sharedmodels.users;
 import sharedmodels.department.Course;
 import sharedmodels.department.Department;
 import java.util.ArrayList;
+import java.util.List;
+
 public class SharedMaster extends SharedUser {
     private MasterRole masterRole;
-    private Department department;
+    private String departmentId;
     private MasterGrade grade;
     private String roomNumber;
-    private ArrayList<Course> courses = new ArrayList<>();
+    private ArrayList<String> coursesId = new ArrayList<>();
+    private List<String> studentsIsHelperMasterIds = new ArrayList<>();
 
     public SharedMaster() {
         super();
@@ -27,12 +30,12 @@ public class SharedMaster extends SharedUser {
         this.masterRole = masterRole;
     }
 
-    public Department getDepartment() {
-        return department;
+    public String getDepartmentId() {
+        return departmentId;
     }
 
-    public void setDepartment(Department department) {
-        this.department = department;
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
     }
 
     public MasterGrade getGrade() {
@@ -51,11 +54,19 @@ public class SharedMaster extends SharedUser {
         this.roomNumber = roomNumber;
     }
 
-    public ArrayList<Course> getCourses() {
-        return courses;
+    public ArrayList<String> getCoursesId() {
+        return coursesId;
     }
 
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
+    public void setCoursesId(ArrayList<String> coursesId) {
+        this.coursesId = coursesId;
+    }
+
+    public List<String> getStudentsIsHelperMasterIds() {
+        return studentsIsHelperMasterIds;
+    }
+
+    public void setStudentsIsHelperMasterIds(List<String> studentsIsHelperMasterIds) {
+        this.studentsIsHelperMasterIds = studentsIsHelperMasterIds;
     }
 }

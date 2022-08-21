@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class Department {
     private String id;
     private String name;
-    private SharedMaster chairman;
-    private SharedMaster educationalAssistant;
-    private ArrayList<Course> courses = new ArrayList<>();
-    private ArrayList<SharedMaster> masters = new ArrayList<>();
-    private ArrayList<SharedStudent> students = new ArrayList<>();
+    private String chairmanId;
+    private String educationalAssistantId;
+    private ArrayList<String> coursesId = new ArrayList<>();
+    private ArrayList<String> mastersId = new ArrayList<>();
+    private ArrayList<String> studentsId = new ArrayList<>();
 
     public Department() {
     }
@@ -33,43 +33,45 @@ public class Department {
         this.name = name;
     }
 
-    public ArrayList<Course> getCourses() {
-        return courses;
+
+
+    public String getChairmanId() {
+        return chairmanId;
     }
 
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
+    public void setChairmanId(String chairmanId) {
+        this.chairmanId = chairmanId;
     }
 
-    public SharedMaster getChairman() {
-        return chairman;
+    public String getEducationalAssistantId() {
+        return educationalAssistantId;
     }
 
-    public void setChairman(SharedMaster chairman) {
-        this.chairman = chairman;
+    public void setEducationalAssistantId(String educationalAssistantId) {
+        this.educationalAssistantId = educationalAssistantId;
     }
 
-    public SharedMaster getEducationalAssistant() {
-        return educationalAssistant;
+    public ArrayList<String> getCoursesId() {
+        return coursesId;
     }
 
-    public void setEducationalAssistant(SharedMaster educationalAssistant) {
-        this.educationalAssistant = educationalAssistant;
+    public void setCoursesId(ArrayList<String> coursesId) {
+        this.coursesId = coursesId;
     }
 
-    public ArrayList<SharedMaster> getMasters() {
-        return masters;
+    public ArrayList<String> getMastersId() {
+        return mastersId;
     }
 
-    public ArrayList<SharedStudent> getStudents() {
-        return students;
+    public void setMastersId(ArrayList<String> mastersId) {
+        this.mastersId = mastersId;
     }
 
-    public void setStudents(ArrayList<SharedStudent> students) {
-        this.students = students;
+    public ArrayList<String> getStudentsId() {
+        return studentsId;
     }
 
-    public void setMasters(ArrayList<SharedMaster> masters) {
-        this.masters = masters;
+    public void setStudentsId(ArrayList<String> studentsId) {
+        this.studentsId = studentsId;
     }
 }

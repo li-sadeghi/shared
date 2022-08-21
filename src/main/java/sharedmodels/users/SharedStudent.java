@@ -11,16 +11,16 @@ import java.util.Random;
 public class SharedStudent extends SharedUser {
     private double average;
     private int units;
-    private Department department;
-    private SharedMaster helperSharedMaster;
+    private String departmentId;
+    private String helperSharedMasterId;
     private String enteringYear;
     private StudentGrade grade;
     private EducationalStatus status;
     private Licence registrationLicence;
     private String registrationTime;
-    private ArrayList<Course> courses = new ArrayList<>();
-    private ArrayList<PassedCourse> passedCourses = new ArrayList<>();
-    private ArrayList<TemporaryCourse> temporaryCourses = new ArrayList<>();
+    private ArrayList<String> coursesId = new ArrayList<>();
+    private ArrayList<String> passedCoursesId = new ArrayList<>();
+    private ArrayList<String> temporaryCoursesId = new ArrayList<>();
 
     public SharedStudent(){
         super();
@@ -40,13 +40,7 @@ public class SharedStudent extends SharedUser {
         this.average = average;
     }
 
-    public SharedMaster getHelperMaster() {
-        return helperSharedMaster;
-    }
 
-    public void setHelperMaster(SharedMaster helperSharedMaster) {
-        this.helperSharedMaster = helperSharedMaster;
-    }
 
     public String getEnteringYear() {
         return enteringYear;
@@ -88,28 +82,44 @@ public class SharedStudent extends SharedUser {
         this.registrationTime = registrationTime;
     }
 
-    public ArrayList<Course> getCourses() {
-        return courses;
+    public String getDepartmentId() {
+        return departmentId;
     }
 
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
     }
 
-    public ArrayList<PassedCourse> getPassedCourses() {
-        return passedCourses;
+    public String getHelperSharedMasterId() {
+        return helperSharedMasterId;
     }
 
-    public void setPassedCourses(ArrayList<PassedCourse> passedCourses) {
-        this.passedCourses = passedCourses;
+    public void setHelperSharedMasterId(String helperSharedMasterId) {
+        this.helperSharedMasterId = helperSharedMasterId;
     }
 
-    public ArrayList<TemporaryCourse> getTemporaryCourses() {
-        return temporaryCourses;
+    public ArrayList<String> getCoursesId() {
+        return coursesId;
     }
 
-    public void setTemporaryCourses(ArrayList<TemporaryCourse> temporaryCourses) {
-        this.temporaryCourses = temporaryCourses;
+    public void setCoursesId(ArrayList<String> coursesId) {
+        this.coursesId = coursesId;
+    }
+
+    public ArrayList<String> getPassedCoursesId() {
+        return passedCoursesId;
+    }
+
+    public void setPassedCoursesId(ArrayList<String> passedCoursesId) {
+        this.passedCoursesId = passedCoursesId;
+    }
+
+    public ArrayList<String> getTemporaryCoursesId() {
+        return temporaryCoursesId;
+    }
+
+    public void setTemporaryCoursesId(ArrayList<String> temporaryCoursesId) {
+        this.temporaryCoursesId = temporaryCoursesId;
     }
 
     public void setRegistrationLicence() {
@@ -117,15 +127,6 @@ public class SharedStudent extends SharedUser {
         int random = rd.nextInt() % 2;
         if (random == 0) this.registrationLicence = Licence.ALLOWED;
         else this.registrationLicence = Licence.ILLEGAL;
-    }
-
-    public void setAverage()  {
-        int size = passedCourses.size();
-        double sum = 0;
-        int unitsPassed = 0;
-        for (int i = 0; i < size; i++) {
-            //TODO
-        }
     }
 
     public int getUnits() {
@@ -136,11 +137,5 @@ public class SharedStudent extends SharedUser {
         this.units = units;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
 
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
 }

@@ -8,6 +8,9 @@ import java.util.ArrayList;
 public class Chat {
     private String senderId;
     private String receiverId;
+    private String receiverImageByes;
+    private String receiverName;
+    private String lastMessage;
     private ArrayList<Message> messages = new ArrayList<>();
 
     public Chat() {
@@ -35,5 +38,29 @@ public class Chat {
 
     public void setMessages(ArrayList<Message> messages) {
         this.messages = messages;
+    }
+
+    public String getReceiverImageByes() {
+        return receiverImageByes;
+    }
+
+    public void setReceiverImageByes(String receiverImageByes) {
+        this.receiverImageByes = receiverImageByes;
+    }
+
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+    public String getLastMessage() {
+        return lastMessage;
+    }
+
+    public void setLastMessage(String lastMessage) {
+        this.lastMessage = lastMessage;
     }
 }

@@ -7,6 +7,8 @@ public class Message {
     private String senderId;
     private String receiverId;
     private String messageText;
+    private String time;
+    private String fileType ;
     private MessageType messageType;
 
     public Message() {
@@ -50,5 +52,21 @@ public class Message {
 
     public void setReceiverId(String receiverId) {
         this.receiverId = receiverId;
+    }
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

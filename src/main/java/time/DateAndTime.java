@@ -48,4 +48,15 @@ public class DateAndTime {
 
         return courses;
     }
+
+    public static boolean isSelectionUnitTime(String startTime, String endTime){
+        String timeNow = DateAndTime.getDateAndTime();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'At' HH:mm:ss");
+        LocalDateTime localDateTimeNow = LocalDateTime.parse(timeNow, formatter);
+        LocalDateTime localDateTimeStart = LocalDateTime.parse(timeNow, formatter);
+        LocalDateTime localDateTimeEnd = LocalDateTime.parse(timeNow, formatter);
+        if (localDateTimeNow.isAfter(localDateTimeEnd))return false;
+        else if (localDateTimeNow.isBefore(localDateTimeStart)) return false;
+        else return true;
+    }
 }

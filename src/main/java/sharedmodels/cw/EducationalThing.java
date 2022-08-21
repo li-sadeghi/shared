@@ -5,6 +5,7 @@ import javax.persistence.*;
 public class EducationalThing {
     private int id;
     private String fileString;
+    private String name;
 
     public EducationalThing() {
     }
@@ -29,4 +30,11 @@ public class EducationalThing {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

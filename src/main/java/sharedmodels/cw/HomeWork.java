@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class HomeWork {
     private int id;
     private String homeworkFileString;
-    private ArrayList<Solution> solutions;
+
+    private String homeWorkName;
+    private ArrayList<Integer> solutionsId;
 
     public HomeWork() {
     }
@@ -26,15 +28,23 @@ public class HomeWork {
         this.homeworkFileString = homeworkFileString;
     }
 
-    public ArrayList<Solution> getSolutions() {
-        return solutions;
+    public ArrayList<Integer> getSolutionsId() {
+        return solutionsId;
     }
 
-    public void setSolutions(ArrayList<Solution> solutions) {
-        this.solutions = solutions;
+    public void setSolutionsId(ArrayList<Integer> solutionsId) {
+        this.solutionsId = solutionsId;
     }
 
     public HomeWork(String homeworkFileString) {
         this.homeworkFileString = homeworkFileString;
+    }
+
+    public String getHomeWorkName() {
+        return homeWorkName;
+    }
+
+    public void setHomeWorkName(String homeWorkName) {
+        this.homeWorkName = homeWorkName;
     }
 }

@@ -35,36 +35,26 @@ public class EncodeDecodeFile {
         }
         return null;
     }
-//    public static void downloadFileAndSave(String encoded, FileType fileType) throws IOException {
-//        String format = "";
-//        switch (fileType) {
-//            case MP4 -> format = ".mp4";
-//            case JPG -> format = ".jpg";
-//            case PDF -> format = ".pdf";
-//            case MP3 -> format = ".mp3";
-//            case NOTHING -> format = ".db";
-//            default -> format = ".jar";
-//        }
-//        byte[] decoded = decode(encoded);
-//        String path = "./src/main/resources/downloadedfiles/" + new Random().nextLong() + format ;
-//        File file = new File(path);
-//        file.createNewFile();
-//        FileOutputStream fileOutputStream = new FileOutputStream(file);
-//        fileOutputStream.write(decoded);
-//        fileOutputStream.close();
-//        fileOutputStream.flush();
-//    }
-//
-//    public static FileType getFormat(String path) {
-//        int index= 0;
-//        for (int i = path.length() - 1; i >= 0; i--) {
-//            if (path.charAt(i) == '.')break;
-//            else index = i;
-//        }
-//        String format = path.substring(index, path.length());
-//        if (format.equals("pdf"))return FileType.PDF;
-//        else if (format.equals("jpg"))return FileType.JPG;
-//        else if (format.equals("mp3"))return FileType.MP3;
-//        else return FileType.MP4;
-//    }
+
+    public static String getFormat(String path){
+        int index = 0;
+        for (int i = path.length() - 1; i >=0; i--) {
+            if (path.charAt(i) == '.'){
+                index = i + 1;
+                break;
+            }
+        }
+        return path.substring(index);
+    }
+
+    public static void downloadFileAndSave(String encoded, String fileType) throws IOException {
+        byte[] decoded = decode(encoded);
+        String path = "./src/main/resources/downloadedfiles/" + new Random().nextLong() + "." + fileType ;
+        File file = new File(path);
+        file.createNewFile();
+        FileOutputStream fileOutputStream = new FileOutputStream(file);
+        fileOutputStream.write(decoded);
+        fileOutputStream.close();
+        fileOutputStream.flush();
+    }
 }

@@ -13,15 +13,15 @@ public class Course {
     private String name;
     private int capacity;
     private SharedMaster master;
-    private Department department;
+    private String departmentId;
     private int unit;
     private String weeklyTime;
     private String examTime;
-    private Course prerequisite;
-    private ArrayList<SharedStudent> studentsHaveCourse = new ArrayList<>();
-    private ArrayList<SharedStudent> teacherAssistants = new ArrayList<>();
-    private ArrayList<EducationalThing> educationalThings = new ArrayList<>();
-    private ArrayList<HomeWork> homeWorks = new ArrayList<>();
+    private String prerequisiteId;
+    private ArrayList<String> studentsHaveCourseId = new ArrayList<>();
+    private ArrayList<String> teacherAssistantsId = new ArrayList<>();
+    private ArrayList<Integer> educationalThingsId = new ArrayList<>();
+    private ArrayList<Integer> homeWorksId = new ArrayList<>();
 
 
     public Course() {
@@ -43,12 +43,12 @@ public class Course {
         this.name = name;
     }
 
-    public Department getDepartment() {
-        return department;
+    public String getDepartmentId() {
+        return departmentId;
     }
 
-    public void setDepartment(Department department) {
-        this.department = department;
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
     }
 
     public int getUnit() {
@@ -83,44 +83,44 @@ public class Course {
         this.master = master;
     }
 
-    public Course getPrerequisite() {
-        return prerequisite;
+    public String getPrerequisiteId() {
+        return prerequisiteId;
     }
 
-    public void setPrerequisite(Course prerequisite) {
-        this.prerequisite = prerequisite;
+    public void setPrerequisiteId(String prerequisiteId) {
+        this.prerequisiteId = prerequisiteId;
     }
 
-    public ArrayList<SharedStudent> getStudentsHaveCourse() {
-        return studentsHaveCourse;
+    public ArrayList<String> getStudentsHaveCourseId() {
+        return studentsHaveCourseId;
     }
 
-    public void setStudentsHaveCourse(ArrayList<SharedStudent> studentsHaveCourse) {
-        this.studentsHaveCourse = studentsHaveCourse;
+    public void setStudentsHaveCourseId(ArrayList<String> studentsHaveCourseId) {
+        this.studentsHaveCourseId = studentsHaveCourseId;
     }
 
-    public ArrayList<SharedStudent> getTeacherAssistants() {
-        return teacherAssistants;
+    public ArrayList<String> getTeacherAssistantsId() {
+        return teacherAssistantsId;
     }
 
-    public void setTeacherAssistants(ArrayList<SharedStudent> teacherAssistants) {
-        this.teacherAssistants = teacherAssistants;
+    public void setTeacherAssistantsId(ArrayList<String> teacherAssistantsId) {
+        this.teacherAssistantsId = teacherAssistantsId;
     }
 
-    public ArrayList<EducationalThing> getEducationalThings() {
-        return educationalThings;
+    public ArrayList<Integer> getEducationalThingsId() {
+        return educationalThingsId;
     }
 
-    public void setEducationalThings(ArrayList<EducationalThing> educationalThings) {
-        this.educationalThings = educationalThings;
+    public void setEducationalThingsId(ArrayList<Integer> educationalThingsId) {
+        this.educationalThingsId = educationalThingsId;
     }
 
-    public ArrayList<HomeWork> getHomeWorks() {
-        return homeWorks;
+    public ArrayList<Integer> getHomeWorksId() {
+        return homeWorksId;
     }
 
-    public void setHomeWorks(ArrayList<HomeWork> homeWorks) {
-        this.homeWorks = homeWorks;
+    public void setHomeWorksId(ArrayList<Integer> homeWorksId) {
+        this.homeWorksId = homeWorksId;
     }
 
     public int getCapacity() {

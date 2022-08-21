@@ -11,8 +11,8 @@ public class TemporaryCourse {
     private String courseId;
     private PassStatus status;
     private String protestText;
-    private SharedMaster master;
-    private SharedStudent student;
+    private String masterId;
+    private String studentId;
 
 
     public TemporaryCourse() {
@@ -73,20 +73,20 @@ public class TemporaryCourse {
         this.protestText = protestText;
     }
 
-    public SharedMaster getMaster() {
-        return master;
+    public String getMasterId() {
+        return masterId;
     }
 
-    public void setMaster(SharedMaster master) {
-        this.master = master;
+    public void setMasterId(String masterId) {
+        this.masterId = masterId;
     }
 
-    public SharedStudent getStudent() {
-        return student;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setStudent(SharedStudent student) {
-        this.student = student;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public String getCourseId() {

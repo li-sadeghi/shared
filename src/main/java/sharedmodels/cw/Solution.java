@@ -8,20 +8,12 @@ import javax.persistence.*;
 public class Solution {
     private int id;
     private double mark;
-    private SharedStudent responsive;
+    private String responsiveId;
     private String answerFileString;
 
     public Solution() {
     }
 
-    public Solution(SharedStudent responsive, String answerFileString) {
-        this.responsive = responsive;
-        this.answerFileString = answerFileString;
-    }
-
-    public SharedStudent getResponsive() {
-        return responsive;
-    }
 
     public double getMark() {
         return mark;
@@ -31,9 +23,6 @@ public class Solution {
         this.mark = mark;
     }
 
-    public void setResponsive(SharedStudent responsive) {
-        this.responsive = responsive;
-    }
 
     public String getAnswerFileString() {
         return answerFileString;
@@ -49,5 +38,13 @@ public class Solution {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getResponsiveId() {
+        return responsiveId;
+    }
+
+    public void setResponsiveId(String responsiveId) {
+        this.responsiveId = responsiveId;
     }
 }
