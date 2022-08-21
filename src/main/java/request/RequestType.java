@@ -21,5 +21,7 @@ public enum RequestType {
     ADD_STUDENT,
     ADD_MASTER,
     EDIT_MASTER,
-    NEW_PROTEST
+    NEW_PROTEST,
+    SET_SELECTION_TIME,
+    FILE_MESSAGE
 }

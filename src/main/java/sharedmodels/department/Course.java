@@ -11,9 +11,11 @@ import java.util.ArrayList;
 public class Course {
     private String id;
     private String name;
+    private boolean isStarred;
     private int capacity;
     private SharedMaster master;
     private String departmentId;
+    private String departmentName;
     private int unit;
     private String weeklyTime;
     private String examTime;
@@ -129,5 +131,21 @@ public class Course {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    public boolean isStarred() {
+        return isStarred;
+    }
+
+    public void setStarred(boolean starred) {
+        isStarred = starred;
     }
 }

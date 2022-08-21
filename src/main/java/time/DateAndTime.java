@@ -50,6 +50,7 @@ public class DateAndTime {
     }
 
     public static boolean isSelectionUnitTime(String startTime, String endTime){
+        if (startTime == null || endTime == null || startTime.equals(" ") || endTime.equals(" "))return false;
         String timeNow = DateAndTime.getDateAndTime();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'At' HH:mm:ss");
         LocalDateTime localDateTimeNow = LocalDateTime.parse(timeNow, formatter);
