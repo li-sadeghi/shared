@@ -17,7 +17,8 @@ public class SharedStudent extends SharedUser {
     private StudentGrade grade;
     private EducationalStatus status;
     private Licence registrationLicence;
-    private String registrationTime;
+    private String registrationTimeStart;
+    private String registrationTimeEnd;
     private ArrayList<String> coursesId = new ArrayList<>();
     private ArrayList<String> passedCoursesId = new ArrayList<>();
     private ArrayList<String> temporaryCoursesId = new ArrayList<>();
@@ -74,12 +75,20 @@ public class SharedStudent extends SharedUser {
         this.registrationLicence = registrationLicence;
     }
 
-    public String getRegistrationTime() {
-        return registrationTime;
+    public String getRegistrationTimeStart() {
+        return registrationTimeStart;
     }
 
-    public void setRegistrationTime(String registrationTime) {
-        this.registrationTime = registrationTime;
+    public void setRegistrationTimeStart(String registrationTimeStart) {
+        this.registrationTimeStart = registrationTimeStart;
+    }
+
+    public String getRegistrationTimeEnd() {
+        return registrationTimeEnd;
+    }
+
+    public void setRegistrationTimeEnd(String registrationTimeEnd) {
+        this.registrationTimeEnd = registrationTimeEnd;
     }
 
     public String getDepartmentId() {
