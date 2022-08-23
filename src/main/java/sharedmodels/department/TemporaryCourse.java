@@ -11,6 +11,7 @@ public class TemporaryCourse {
     private String courseId;
     private PassStatus status;
     private String protestText;
+    private String protestAnswer;
     private String masterId;
     private String studentId;
 
@@ -95,5 +96,13 @@ public class TemporaryCourse {
 
     public void setCourseId(String courseId) {
         this.courseId = courseId;
+    }
+
+    public String getProtestAnswer() {
+        return protestAnswer;
+    }
+
+    public void setProtestAnswer(String protestAnswer) {
+        this.protestAnswer = protestAnswer;
     }
 }

@@ -5,9 +5,12 @@ import java.util.ArrayList;
 public class HomeWork {
     private int id;
     private String homeworkFileString;
-
+    private String startTime;
+    private String endTime;
     private String homeWorkName;
     private ArrayList<Integer> solutionsId;
+    private String courseId;
+    private String homeWorkFileType;
 
     public HomeWork() {
     }
@@ -46,5 +49,37 @@ public class HomeWork {
 
     public void setHomeWorkName(String homeWorkName) {
         this.homeWorkName = homeWorkName;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
+
+    public String getHomeWorkFileType() {
+        return homeWorkFileType;
+    }
+
+    public void setHomeWorkFileType(String homeWorkFileType) {
+        this.homeWorkFileType = homeWorkFileType;
     }
 }

@@ -6,6 +6,7 @@ public class EducationalThing {
     private int id;
     private String fileString;
     private String name;
+    private String fileType;
 
     public EducationalThing() {
     }
@@ -36,5 +37,13 @@ public class EducationalThing {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
     }
 }

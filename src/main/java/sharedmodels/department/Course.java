@@ -11,7 +11,8 @@ import java.util.ArrayList;
 public class Course {
     private String id;
     private String name;
-    private boolean isStarred;
+    private String isStarred = "No";
+    private boolean haveCwPage ;
     private int capacity;
     private SharedMaster master;
     private String departmentId;
@@ -141,11 +142,19 @@ public class Course {
         this.departmentName = departmentName;
     }
 
-    public boolean isStarred() {
+    public String getIsStarred() {
         return isStarred;
     }
 
-    public void setStarred(boolean starred) {
-        isStarred = starred;
+    public void setIsStarred(String isStarred) {
+        this.isStarred = isStarred;
+    }
+
+    public boolean isHaveCwPage() {
+        return haveCwPage;
+    }
+
+    public void setHaveCwPage(boolean haveCwPage) {
+        this.haveCwPage = haveCwPage;
     }
 }

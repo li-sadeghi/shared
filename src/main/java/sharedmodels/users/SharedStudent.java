@@ -146,5 +146,13 @@ public class SharedStudent extends SharedUser {
         this.units = units;
     }
 
+    public int allUnitPassed(ArrayList<PassedCourse> passedCourses){
+        int ans = 0;
+        for (PassedCourse passedCourse : passedCourses) {
+            ans += passedCourse.getUnit();
+        }
+        return ans;
+    }
+
 
 }
