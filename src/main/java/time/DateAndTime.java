@@ -60,4 +60,13 @@ public class DateAndTime {
         else if (localDateTimeNow.isBefore(localDateTimeStart)) return false;
         else return true;
     }
+
+    public static boolean isOver(String time){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'At' HH:mm:ss");
+        LocalDateTime localDateTime = LocalDateTime.parse(time, formatter);
+        String timeNow = DateAndTime.getDateAndTime();
+        LocalDateTime localDateTimeNow = LocalDateTime.parse(timeNow, formatter);
+        if (localDateTimeNow.isAfter(localDateTime))return true;
+        else return false;
+    }
 }
