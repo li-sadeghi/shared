@@ -38,5 +38,6 @@ public enum RequestType {
     DELETE_EDUCATIONAL,
     ADD_HOMEWORK,
     ADD_EDUCATIONAL,
-    ALL_HOMEWORKS
+    ALL_HOMEWORKS,
+    ADD_TA
 }
